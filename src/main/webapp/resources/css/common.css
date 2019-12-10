@@ -116,3 +116,6 @@ input:focus {
     font-size: 120px !important;
 
 }
+.ui.card{
+    width:100% !important;
+}

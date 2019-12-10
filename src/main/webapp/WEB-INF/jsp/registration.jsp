@@ -9,7 +9,6 @@
     <meta charset="utf-8">
     <title>Create an account</title>
     <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>

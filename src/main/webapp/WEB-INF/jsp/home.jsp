@@ -56,36 +56,38 @@
           <div class="ui attached message">
             <div class="ui card">
                 <div class="content">
-                    <div class="header">Project Timeline</div>
+                    <div class="header">Add an entity</div>
                 </div>
                 <div class="content">
-                    <h4 class="ui sub header">Activity</h4>
-                    <div class="ui small feed">
-                        <div class="event">
-                            <div class="content">
-                                <div class="summary">
-                                    <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event">
-                            <div class="content">
-                                <div class="summary">
-                                    <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="event">
-                            <div class="content">
-                                <div class="summary">
-                                    <a>Helen Troy</a> added two pictures
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                   <form class="ui form segment">
+  
+  <div class="two fields">
+    <div class="field">
+      <label>Tool/Software Name</label>
+      <input placeholder="First Name" name="name" type="text">
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <input placeholder="First Name" name="name" type="text">
+    </div>
+  </div>
+  <div class="two fields">
+    <div class="field">
+      <label>Version</label>
+      <input placeholder="Version" name="version" type="text">
+    </div>
+    <div class="field">
+      <label>Uses</label>
+      <input type="text" name="Uses" placeholder="Uses">
+    </div>
+  </div>
+  
+  <div class="ui error message"></div>
+</form>
                 </div>
                 <div class="extra content">
-                    <button class="ui button">Join Project</button>
+                    <button class="ui submit button">Add</button>
+                     <button class="ui right floated  button">Clear</button>
                 </div>
             </div>
         </div>
@@ -94,37 +96,26 @@
             <div class="eight wide column">
               <div class="ui attached message">
                 <div class="ui card">
+                <div class="content">
+                    <div class="header">Add an Operation</div>
+                </div>
                     <div class="content">
-                        <div class="header">Project Timeline</div>
-                    </div>
-                    <div class="content">
-                        <h4 class="ui sub header">Activity</h4>
-                        <div class="ui small feed">
-                            <div class="event">
-                                <div class="content">
-                                    <div class="summary">
-                                        <a>Elliot Fu</a> added <a>Jenny Hess</a> to the project
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event">
-                                <div class="content">
-                                    <div class="summary">
-                                        <a>Stevie Feliciano</a> was added as an <a>Administrator</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="event">
-                                <div class="content">
-                                    <div class="summary">
-                                        <a>Helen Troy</a> added two pictures
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="ui attached message">
+                     <center><i class="large
+          plus circle icon"></i></center><br /><br />
+          <div class="ui icon message">
+  
+  <div class="content">
+    <div class="header">
+      Start the tool? &nbsp;&nbsp;<i class="arrow alternate circle right large icon"></i>&nbsp;&nbsp;<i class="trash alternate
+ large icon"></i>
+    </div>
+   </div>
+  </div>
+</div>
                     </div>
                     <div class="extra content">
-                        <button class="ui button">Join Project</button>
+                     
                     </div>
                 </div>
             </div>

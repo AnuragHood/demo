@@ -119,3 +119,6 @@ input:focus {
 .ui.card{
     width:100% !important;
 }
+.negative.message{
+    font-size: 10px;
+}

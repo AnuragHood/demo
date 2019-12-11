@@ -65,7 +65,7 @@
                             <div class="two fields">
                                 <div class="field">
                                     <label>Tool/Software Name</label>
-                                    <input placeholder="Tool/Software Name" name="name" type="text" class="messageId">
+                                    <input placeholder="Tool/Software Name" name="name" type="text" class="messageId" id = "toolSoftware">
                                     <div class="ui negative message">
                                         <i class="close icon"></i>
                                         <p>Type minimum 10 characters!!
@@ -74,7 +74,7 @@
 
                                 <div class="field">
                                     <label>Description</label>
-                                    <input placeholder="Tool/Software Description" name="name" type="text" class="messageId">
+                                    <input placeholder="Tool/Software Description" name="name" type="text" class="messageId" id ="description">
                                     <div class="ui negative message">
                                         <i class="close icon"></i>
                                         <p>Type minimum 10 characters!!
@@ -85,11 +85,11 @@
                             <div class="two fields">
                                 <div class="field">
                                     <label>Version</label>
-                                    <input placeholder="Version" name="version" type="text">
+                                    <input placeholder="Version" name="version" type="text" id ="version">
                                 </div>
                                 <div class="field">
                                     <label>Uses</label>
-                                    <input type="text" name="Uses" placeholder="Uses">
+                                    <input type="text" name="Uses" placeholder="Uses" id="uses">
                                 </div>
                             </div>
 
@@ -110,19 +110,15 @@
                     <div class="content">
                         <div class="ui attached message">
                             <center><i class="large
-          plus circle icon"></i></center>
+          plus circle icon addTodo"></i></center>
 
                             <div class="ui icon message">
 
-                                <div class="content">
-                                    <%--<div class="header">
-                                        Start the tool? &nbsp;&nbsp;<i
-                                            class="arrow alternate circle right large icon"></i>&nbsp;&nbsp;<i class="trash alternate
- large icon"></i>
-                                    </div>--%>
+                                <div class="todo content">
+                                
                                       <div class="field">
                                         <label>What to do?</label>
-                                        <input placeholder="ex start the tool(instructions)" name="name" type="text" class="messageId">
+                                        <input placeholder="ex start the tool(instructions)" name="todoName" type="text" class="messageId" id ="">
                                           <div class="ui negative message">
                                               <i class="close icon"></i>
                                               <p>Type minimum 10 characters!!
@@ -143,11 +139,83 @@
     <button class="ui right floated reset button">Clear</button>
   </div>
 </div>
+
+<c:forEach items="${itemList}" var="value">
+ <div class="ui attached message" id="showEntity">
+    <div class="ui grid">
+        <div class="eight wide column">
+            <div class="ui attached message">
+                <div class="ui card">
+                    <div class="content">
+                        <div class="header">Details:</div>
+                    </div>
+                    <div class="content">
+                       <table class="ui celled stackable table">
+  <thead>
+    <tr><th>Name</th>
+    <th>Description</th>
+    <th>Version</th>
+     <th>Uses</th>
+  </tr></thead>
+  <tbody>
+    <tr>
+      <td >value.softwareName</td>
+      <td >value.description</td>
+      <td >value.version</td>
+       <td >value.uses</td>
+    </tr>
+  </tbody>
+</table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="eight wide column">
+            <div class="ui attached message">
+                <div class="ui card">
+                    <div class="content">
+                        <div class="header">Perform an available Operation:</div>
+                    </div>
+                    <div class="content">
+                        <div class="ui attached message">
+                            <center><i class="large
+          plus circle icon addTodo"></i></center>
+
+                            <div class="ui icon message">
+
+                                <div class="content">
+                                <c:if test="${!empty value.commands}">
+<c:forEach items="${itemList}" var="value2">
+                                   <div class="header">
+                                        value2 &nbsp;&nbsp;<i
+                                            class="arrow alternate circle right large icon"></i>&nbsp;&nbsp;<i class="trash alternate
+ large icon"></i>
+                                    </div>
+                                    </c:forEach>
+                                    </c:if>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  <div class="extra content">
+    <button class="ui primary submit button" id ="sendButton">Add</button>
+    <button class="ui right floated reset button">Clear</button>
+  </div>
+</div>
+</c:forEach>
+
 </div>
 <script
-        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-        crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
 <script src="${contextPath}/resources/js/common.js"></script>
 <script src="${contextPath}/resources/js/home.js"></script>

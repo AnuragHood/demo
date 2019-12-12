@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     });
     $('.addTodo').click(function(){
-    	$('.todo.content').append('<div class=field><label>What to do?</label><input placeholder=ex start the tool(instructions) name=todoName type=text class=messageId id =><div class=ui negative message><i class=close icon></i><p>Type minimum 10 characters!!</p></div></div>')
+    	$('.todo.content').append('<div class=field><label>What to do?</label><input placeholder=ex start the tool(instructions) name=todoName type=text class=messageId id =><div class=ui negative message><i class=close icon></i><p>Type minimum 10 characters!!</p></div></div><br />')
     })
     $('#sendButton').click(function(){
     var serviceUrl = "/demo/home/saveEntity";

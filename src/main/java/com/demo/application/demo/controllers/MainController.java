@@ -31,7 +31,7 @@ public class MainController {
 		mv = new ModelAndView("home");
 		List<Demo> itemList = (List<Demo>) entityServiceImpl.getDemo();
 		logger.info("going out saveEntity-->>{}", itemList.toString());
-		mv.addObject(itemList);
+		mv.addObject("itemList",itemList);
 		return mv;
 	}
 
@@ -48,7 +48,7 @@ public class MainController {
 		}
 		List<Demo> itemList = (List<Demo>) entityServiceImpl.getDemo();
 		logger.info("going out saveEntity-->>{}", itemList.toString());
-		mv.addObject(itemList);
+		mv.addObject("itemList",itemList);
 
 		return mv;
 	}
